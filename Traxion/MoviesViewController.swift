@@ -12,11 +12,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var tableView: UITableView!
 
+    var movies: [NSDictionary]! = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+
+        var url = NSURL(string: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?limit=30&country=us&apikey=dagqdghwaq3e3mxyrp7kmmj5")
+        var request = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+            var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
+            
+            self.movies = responseDictionary["movies"] as [NSDictionary]
+            self.tableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,13 +37,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return movies.count
     }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell") as MovieTableViewCell
 
-        cell.titleLabel.text = "Hello"
-        cell.synopsisLabel.text = "Hi"
+        var movie = movies[indexPath.row]
+        cell.titleLabel.text = movie["title"] as? String
+        cell.synopsisLabel.text = movie["synopsis"] as? String
         
         return cell
     }
