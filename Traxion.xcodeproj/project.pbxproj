@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C5BA93EC1A80B11C00A19EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA93EB1A80B11C00A19EF9 /* AppDelegate.swift */; };
-		C5BA93EE1A80B11C00A19EF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA93ED1A80B11C00A19EF9 /* ViewController.swift */; };
 		C5BA93F11A80B11C00A19EF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5BA93EF1A80B11C00A19EF9 /* Main.storyboard */; };
 		C5BA93F31A80B11C00A19EF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5BA93F21A80B11C00A19EF9 /* Images.xcassets */; };
 		C5BA93F61A80B11C00A19EF9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BA93F41A80B11C00A19EF9 /* LaunchScreen.xib */; };
 		C5BA94021A80B11C00A19EF9 /* TraxionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA94011A80B11C00A19EF9 /* TraxionTests.swift */; };
+		C5BA940E1A80B1BC00A19EF9 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		C5BA93E61A80B11C00A19EF9 /* Traxion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traxion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BA93EA1A80B11C00A19EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5BA93EB1A80B11C00A19EF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C5BA93ED1A80B11C00A19EF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C5BA93F01A80B11C00A19EF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5BA93F21A80B11C00A19EF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C5BA93F51A80B11C00A19EF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C5BA93FB1A80B11C00A19EF9 /* TraxionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraxionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5BA94001A80B11C00A19EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5BA94011A80B11C00A19EF9 /* TraxionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraxionTests.swift; sourceTree = "<group>"; };
+		C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 		C5BA93E81A80B11C00A19EF9 /* Traxion */ = {
 			isa = PBXGroup;
 			children = (
+				C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */,
 				C5BA93EB1A80B11C00A19EF9 /* AppDelegate.swift */,
-				C5BA93ED1A80B11C00A19EF9 /* ViewController.swift */,
 				C5BA93EF1A80B11C00A19EF9 /* Main.storyboard */,
 				C5BA93F21A80B11C00A19EF9 /* Images.xcassets */,
 				C5BA93F41A80B11C00A19EF9 /* LaunchScreen.xib */,
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BA93EE1A80B11C00A19EF9 /* ViewController.swift in Sources */,
 				C5BA93EC1A80B11C00A19EF9 /* AppDelegate.swift in Sources */,
+				C5BA940E1A80B1BC00A19EF9 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
