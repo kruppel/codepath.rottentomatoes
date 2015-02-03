@@ -44,8 +44,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         var cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell") as MovieTableViewCell
 
         var movie = movies[indexPath.row]
+        var url = movie.valueForKeyPath("posters.thumbnail") as String
         cell.titleLabel.text = movie["title"] as? String
         cell.synopsisLabel.text = movie["synopsis"] as? String
+        cell.posterView.setImageWithURL(NSURL(string: url))
         
         return cell
     }
