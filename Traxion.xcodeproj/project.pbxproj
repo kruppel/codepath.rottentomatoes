@@ -13,6 +13,7 @@
 		C5BA93F61A80B11C00A19EF9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5BA93F41A80B11C00A19EF9 /* LaunchScreen.xib */; };
 		C5BA94021A80B11C00A19EF9 /* TraxionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA94011A80B11C00A19EF9 /* TraxionTests.swift */; };
 		C5BA940E1A80B1BC00A19EF9 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */; };
+		C5BA94101A80B40400A19EF9 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		C5BA94001A80B11C00A19EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5BA94011A80B11C00A19EF9 /* TraxionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraxionTests.swift; sourceTree = "<group>"; };
 		C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */,
 				C5BA93EB1A80B11C00A19EF9 /* AppDelegate.swift */,
 				C5BA93EF1A80B11C00A19EF9 /* Main.storyboard */,
+				C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */,
 				C5BA93F21A80B11C00A19EF9 /* Images.xcassets */,
 				C5BA93F41A80B11C00A19EF9 /* LaunchScreen.xib */,
 				C5BA93E91A80B11C00A19EF9 /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				C5BA93EC1A80B11C00A19EF9 /* AppDelegate.swift in Sources */,
 				C5BA940E1A80B1BC00A19EF9 /* MoviesViewController.swift in Sources */,
+				C5BA94101A80B40400A19EF9 /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

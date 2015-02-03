@@ -28,9 +28,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return 100
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        
-        cell.textLabel?.text = "Hello"
+        var cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell") as MovieTableViewCell
+
+        cell.titleLabel.text = "Hello"
+        cell.synopsisLabel.text = "Hi"
         
         return cell
     }
