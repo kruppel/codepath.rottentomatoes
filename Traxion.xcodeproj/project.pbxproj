@@ -17,6 +17,8 @@
 		C5BA940E1A80B1BC00A19EF9 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */; };
 		C5BA94101A80B40400A19EF9 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */; };
 		C5C43B201A88079F0078A23E /* DVDsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C43B1F1A88079F0078A23E /* DVDsViewController.swift */; };
+		C5C43B2C1A88105F0078A23E /* box_office@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5C43B2A1A88105F0078A23E /* box_office@2x.png */; };
+		C5C43B2D1A88105F0078A23E /* dvd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5C43B2B1A88105F0078A23E /* dvd@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		C5C43B1F1A88079F0078A23E /* DVDsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDsViewController.swift; sourceTree = "<group>"; };
+		C5C43B2A1A88105F0078A23E /* box_office@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box_office@2x.png"; sourceTree = "<group>"; };
+		C5C43B2B1A88105F0078A23E /* dvd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dvd@2x.png"; sourceTree = "<group>"; };
 		F1B1EF131641530BE9528F87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,7 @@
 				C5BA93EB1A80B11C00A19EF9 /* AppDelegate.swift */,
 				C5BA93EF1A80B11C00A19EF9 /* Main.storyboard */,
 				C5C43B1F1A88079F0078A23E /* DVDsViewController.swift */,
+				C5C43B251A880BC60078A23E /* Images */,
 				C5122D6D1A80BDF3005D5C08 /* MovieViewController.swift */,
 				C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */,
 				C5BA93F21A80B11C00A19EF9 /* Images.xcassets */,
@@ -145,6 +150,15 @@
 				C5BA94001A80B11C00A19EF9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5C43B251A880BC60078A23E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C5C43B2A1A88105F0078A23E /* box_office@2x.png */,
+				C5C43B2B1A88105F0078A23E /* dvd@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +243,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C43B2D1A88105F0078A23E /* dvd@2x.png in Resources */,
 				C5BA93F11A80B11C00A19EF9 /* Main.storyboard in Resources */,
 				C5BA93F61A80B11C00A19EF9 /* LaunchScreen.xib in Resources */,
+				C5C43B2C1A88105F0078A23E /* box_office@2x.png in Resources */,
 				C5BA93F31A80B11C00A19EF9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

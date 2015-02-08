@@ -9,11 +9,11 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MoviesViewController" customModule="Traxion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="22" sectionFooterHeight="22" id="kP0-Cj-Dk8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -156,11 +156,11 @@
             <objects>
                 <viewController id="2Rp-IP-P2l" customClass="MovieViewController" customModule="Traxion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pee-Ea-qC0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="aha-K6-tfv">
-                                <rect key="frame" x="0.0" y="64" width="320" height="450"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="401"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="DLd-Qs-zzp">
@@ -216,7 +216,7 @@
         <scene sceneID="WG1-oq-mdo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="foZ-0R-5A2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Box Office" id="nqr-88-i8Y"/>
+                    <tabBarItem key="tabBarItem" title="Box Office" image="box_office.png" id="nqr-88-i8Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2VP-do-Sv6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -237,7 +237,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MZZ-jj-oik" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="RKH-pv-4hx">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" translucent="NO" id="RKH-pv-4hx">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -250,6 +250,9 @@
             <point key="canvasLocation" x="288" y="330"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="box_office.png" width="21" height="19"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
