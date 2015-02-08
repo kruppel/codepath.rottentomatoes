@@ -14,8 +14,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
     let refreshControl = UIRefreshControl()
 
-    var movies: [NSDictionary]! = []
-    var selectedMovie: NSDictionary! = nil
+    var movies:[NSDictionary]! = []
+    var selectedMovie:NSDictionary! = nil
+    var preloadImage:UIImage! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tabBarController?.tabBar.barTintColor = UIColor.whiteColor()
         tabBarController?.tabBar.tintColor = UIColor.blackColor()
         
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorInset = UIEdgeInsetsZero
 
         fetch()
         refreshControl.addTarget(self, action: "onRefresh", forControlEvents: .ValueChanged)
@@ -77,7 +79,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as MovieTableViewCell
+
         selectedMovie = movies[indexPath.row] as NSDictionary
+        preloadImage = cell.posterView.image
 
         return indexPath
     }
@@ -93,6 +98,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         var viewController = segue.destinationViewController as MovieViewController
         
         viewController.movie = selectedMovie
+        viewController.preloadImage = preloadImage
     }
 
 }
