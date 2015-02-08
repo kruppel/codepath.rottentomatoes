@@ -71,7 +71,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let movie = movies[indexPath.row]
         let posterView = cell.posterView
 
-        posterView.alpha = 0
         cell.titleLabel.text = movie["title"] as? String
         cell.synopsisLabel.text = movie["synopsis"] as? String
 
@@ -81,13 +80,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
         request.addValue("image/*", forHTTPHeaderField: "Accept")
 
-        posterView.setImageWithURLRequest(request, placeholderImage: nil, success: { (request, response, image) -> Void in
-            UIView.animateWithDuration(0.4, animations: {
-              posterView.alpha = 1
-            })
-            posterView.image = image
-        }, failure: nil)
-
+        let img = UIImageView.sharedImageCache().cachedImageForRequest(request as NSURLRequest)
+        if (img != nil) {
+            posterView.image = img
+        } else {
+            posterView.alpha = 0
+            posterView.setImageWithURLRequest(request, placeholderImage: nil, success: { (request, response, image) -> Void in
+                UIView.animateWithDuration(0.4, animations: {
+                    posterView.alpha = 1
+                })
+                posterView.image = image
+            }, failure: nil)
+        }
 
         return cell
     }
