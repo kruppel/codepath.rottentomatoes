@@ -23,7 +23,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
         tabBarController?.tabBar.barTintColor = UIColor.whiteColor()
         tabBarController?.tabBar.tintColor = UIColor.blackColor()
-        
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorInset = UIEdgeInsetsZero
@@ -67,14 +67,28 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell") as MovieTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MovieTableViewCell") as MovieTableViewCell
+        let movie = movies[indexPath.row]
+        let posterView = cell.posterView
 
-        var movie = movies[indexPath.row]
-        var url = movie.valueForKeyPath("posters.thumbnail") as String
+        posterView.alpha = 0
         cell.titleLabel.text = movie["title"] as? String
         cell.synopsisLabel.text = movie["synopsis"] as? String
-        cell.posterView.setImageWithURL(NSURL(string: url))
-        
+
+        let href = movie.valueForKeyPath("posters.thumbnail") as String
+        let url = NSURL(string: href)
+        let request = NSMutableURLRequest(URL: url!)
+
+        request.addValue("image/*", forHTTPHeaderField: "Accept")
+
+        posterView.setImageWithURLRequest(request, placeholderImage: nil, success: { (request, response, image) -> Void in
+            UIView.animateWithDuration(0.4, animations: {
+              posterView.alpha = 1
+            })
+            posterView.image = image
+        }, failure: nil)
+
+
         return cell
     }
 
@@ -96,7 +110,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         var viewController = segue.destinationViewController as MovieViewController
-        
+
         viewController.movie = selectedMovie
         viewController.preloadImage = preloadImage
     }

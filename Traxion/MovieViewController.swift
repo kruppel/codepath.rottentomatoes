@@ -42,10 +42,12 @@ class MovieViewController: UIViewController {
 
         titleLabel.text = movie["title"] as NSString
         synopsisLabel.text = movie["synopsis"] as NSString
+        posterView.image = preloadImage
+
         let url = NSURL(string: orig)
         let request = NSMutableURLRequest(URL: url!)
         request.addValue("image/*", forHTTPHeaderField: "Accept")
-        posterView.image = preloadImage
+
         posterView.setImageWithURLRequest(request, placeholderImage: nil, success: { (request, response, image) -> Void in
             blurEffectView.hidden = true
             self.posterView.image = image
