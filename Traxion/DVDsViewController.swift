@@ -1,14 +1,14 @@
 //
-//  MoviesViewController.swift
+//  DVDsViewController.swift
 //  Traxion
 //
-//  Created by Kurt Ruppel on 2/2/15.
+//  Created by Kurt Ruppel on 2/8/15.
 //  Copyright (c) 2015 kruppel. All rights reserved.
 //
 
 import UIKit
 
-class MoviesViewController: UIViewController {
+class DVDsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

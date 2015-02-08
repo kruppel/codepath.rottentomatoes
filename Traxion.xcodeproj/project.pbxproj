@@ -16,6 +16,7 @@
 		C5BA94021A80B11C00A19EF9 /* TraxionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA94011A80B11C00A19EF9 /* TraxionTests.swift */; };
 		C5BA940E1A80B1BC00A19EF9 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */; };
 		C5BA94101A80B40400A19EF9 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */; };
+		C5C43B201A88079F0078A23E /* DVDsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C43B1F1A88079F0078A23E /* DVDsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C5BA94011A80B11C00A19EF9 /* TraxionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraxionTests.swift; sourceTree = "<group>"; };
 		C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		C5C43B1F1A88079F0078A23E /* DVDsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDsViewController.swift; sourceTree = "<group>"; };
 		F1B1EF131641530BE9528F87 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				C5BA940D1A80B1BC00A19EF9 /* MoviesViewController.swift */,
 				C5BA93EB1A80B11C00A19EF9 /* AppDelegate.swift */,
 				C5BA93EF1A80B11C00A19EF9 /* Main.storyboard */,
+				C5C43B1F1A88079F0078A23E /* DVDsViewController.swift */,
 				C5122D6D1A80BDF3005D5C08 /* MovieViewController.swift */,
 				C5BA940F1A80B40400A19EF9 /* MovieTableViewCell.swift */,
 				C5BA93F21A80B11C00A19EF9 /* Images.xcassets */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5BA93EC1A80B11C00A19EF9 /* AppDelegate.swift in Sources */,
+				C5C43B201A88079F0078A23E /* DVDsViewController.swift in Sources */,
 				C5BA940E1A80B1BC00A19EF9 /* MoviesViewController.swift in Sources */,
 				C5BA94101A80B40400A19EF9 /* MovieTableViewCell.swift in Sources */,
 				C5122D6E1A80BDF3005D5C08 /* MovieViewController.swift in Sources */,
