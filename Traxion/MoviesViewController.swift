@@ -20,6 +20,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tabBarController?.tabBar.barTintColor = UIColor.whiteColor()
+        tabBarController?.tabBar.tintColor = UIColor.blackColor()
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
 
